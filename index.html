@@ -157,8 +157,8 @@
 其他的照着要求填
 </code></pre><h4 id="4-创建完成后，会生成一段代码-通用代码"><a href="#4-创建完成后，会生成一段代码-通用代码" class="headerlink" title="4.创建完成后，会生成一段代码(通用代码)"></a>4.创建完成后，会生成一段代码(通用代码)</h4><p><img src="http://a3.qpic.cn/psb?/V11qI0BQ26Ocim/K*LJWo4wHatDjLPCVHk7KgWIHCsBd.AIYvcgYWS6XtI!/b/dB8BAAAAAAAA&amp;bo=IgMPAgAAAAADBw4!&amp;rf=viewer_4" alt="Alt text"></p>
 <p>##<code>复制</code></p>
-<h4 id="5-进入当前配置文件，找到-config-xml文件，添加："><a href="#5-进入当前配置文件，找到-config-xml文件，添加：" class="headerlink" title="5.进入当前配置文件，找到_config.xml文件，添加："></a>5.进入当前配置文件，找到<code>_config.xml</code>文件，添加：</h4><pre><code>duoshuo_shortname：你的多说域名(只写你输入的内容)
-</code></pre><h4 id="6-进入-themes-landscape-layout-partial-article-ejs-这里的-landscape-是默认的主题名，如果你换了主题，需要替换成自己的主题名"><a href="#6-进入-themes-landscape-layout-partial-article-ejs-这里的-landscape-是默认的主题名，如果你换了主题，需要替换成自己的主题名" class="headerlink" title="6.进入 themes/landscape/layout/_partial/article.ejs (这里的 landscape 是默认的主题名，如果你换了主题，需要替换成自己的主题名)"></a>6.进入 themes/landscape/layout/_partial/article.ejs (这里的 landscape 是默认的主题名，如果你换了主题，需要替换成自己的主题名)</h4><pre><code>把最后一段这个代码
+<h4 id="5-进入当前配置文件，找到-config-xml文件，添加："><a href="#5-进入当前配置文件，找到-config-xml文件，添加：" class="headerlink" title="5.进入当前配置文件，找到_config.xml文件，添加："></a>5.进入当前配置文件，找到_config.xml文件，添加：</h4><pre><code>duoshuo_shortname：你的多说域名(只写你输入的内容)
+</code></pre><h4 id="6-进入themes-landscape-layout-partial-article-ejs-这里的-landscape-是默认的主题名，如果你换了主题，需要替换成自己的主题名"><a href="#6-进入themes-landscape-layout-partial-article-ejs-这里的-landscape-是默认的主题名，如果你换了主题，需要替换成自己的主题名" class="headerlink" title="6.进入themes/landscape/layout/_partial/article.ejs(这里的 landscape 是默认的主题名，如果你换了主题，需要替换成自己的主题名)"></a>6.进入themes/landscape/layout/_partial/article.ejs(这里的 landscape 是默认的主题名，如果你换了主题，需要替换成自己的主题名)</h4><pre><code>把最后一段这个代码
 &lt;% if (!index &amp;&amp; post.comments &amp;&amp; config.disqus_shortname){ %&gt;
     &lt;section id=&quot;comments&quot;&gt;
         &lt;div id=&quot;disqus_thread&quot;&gt;
@@ -167,7 +167,7 @@
     &lt;/section&gt;
 &lt;% } %&gt;
 替换成第4步的通用代码
-</code></pre><h4 id="7-再将通用代码中的第一个div，替换成下面的div"><a href="#7-再将通用代码中的第一个div，替换成下面的div" class="headerlink" title="7.再将通用代码中的第一个div，替换成下面的div"></a>7.再将通用代码中的第一个<code>div</code>，替换成下面的<code>div</code></h4><pre><code>&lt;!-- 多说评论框 start --&gt;
+</code></pre><h4 id="7-再将通用代码中的第一个div，替换成下面的div"><a href="#7-再将通用代码中的第一个div，替换成下面的div" class="headerlink" title="7.再将通用代码中的第一个div，替换成下面的div"></a>7.再将通用代码中的第一个div，替换成下面的div</h4><pre><code>&lt;!-- 多说评论框 start --&gt;
 &lt;div class=&quot;ds-thread&quot; data-thread-key=&quot;&lt;%= post.layout %&gt;-&lt;%= post.slug %&gt;&quot; data-title=&quot;&lt;%= post.title %&gt;&quot; data-url=&quot;&lt;%= page.permalink %&gt;&quot;&gt;&lt;/div&gt;
 </code></pre><h3 id="完成上述操作，你就有了多说评论了"><a href="#完成上述操作，你就有了多说评论了" class="headerlink" title="完成上述操作，你就有了多说评论了"></a>完成上述操作，你就有了多说评论了</h3><p><img src="http://a3.qpic.cn/psb?/V11qI0BQ26Ocim/o92eOJxzGvoi8qxCMp3uLGluKJZ2Un7JmtUNXQ7ZrWU!/b/dLAAAAAAAAAA&amp;bo=gAJHAQAAAAADB.Y!&amp;rf=viewer_4" alt="Alt text"></p>
 
