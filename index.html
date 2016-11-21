@@ -168,19 +168,22 @@ String(null) //&quot;null&quot;  null：转为&quot;null&quot;。
 </blockquote>
 <pre><code>String({a: 1}) // &quot;[object Object]&quot;
 String([1, 2, 3]) // &quot;1,2,3&quot;
-</code></pre><h2 id="数值-Number"><a href="#数值-Number" class="headerlink" title="数值(Number())"></a>数值(Number())</h2><h3 id="Number-可以将任意类型转换成数值"><a href="#Number-可以将任意类型转换成数值" class="headerlink" title="Number()可以将任意类型转换成数值"></a>Number()可以将任意类型转换成数值</h3><pre><code>Number(324) // 324  数值：转换后还是原来的值
+</code></pre><p><code>注</code>: 字符串与字符串相加 得到的是字符串拼接 <br><br>      字符串与任意类型相加 得到的也是字符串（拼接）<br><br>      字符串与字符串 - * / % 得到的是NaN</p>
+<h2 id="数值-Number"><a href="#数值-Number" class="headerlink" title="数值(Number())"></a>数值(Number())</h2><h3 id="Number-可以将任意类型转换成数值"><a href="#Number-可以将任意类型转换成数值" class="headerlink" title="Number()可以将任意类型转换成数值"></a>Number()可以将任意类型转换成数值</h3><pre><code>Number(324) // 324  数值：转换后还是原来的值
 Number(&apos;\t\v\r324\n&apos;) // 324  字符串：如果可以被解析为数值，则转换为相应的数值
 Number(&apos;abc&apos;) // NaN  字符串：如果不可以被解析为数值，返回NaN
 Number(&apos;&apos;) // 0  空字符串转为0
 Number(undefined) // NaN  undefined：转成 NaN
 Number(null) // 0  null：转成0
-</code></pre><h3 id="parseInt-和parseFloat"><a href="#parseInt-和parseFloat" class="headerlink" title="parseInt()和parseFloat()"></a><code>parseInt()</code>和<code>parseFloat()</code></h3><blockquote>
-<p>前者将字符串转换为整数（结果不约，直接取整），后者转换为浮点数。在转换过程中，两个方法从字符串的第一个字符开始解析，直到碰到无法识别的字符结束。如果完全无法解析，两个方法都会返回 NaN。</p>
-</blockquote>
-<pre><code>parseInt(&quot;123abc&quot;)  //123
+</code></pre><h3 id="parseInt-和parseFloat"><a href="#parseInt-和parseFloat" class="headerlink" title="parseInt()和parseFloat()"></a><code>parseInt()</code>和<code>parseFloat()</code></h3><pre><code>//从头开始解析，遇到非数字后立即停止返回，有基数（进制）转换，
+//parseInt 输出整数
+parseInt(&quot;123abc&quot;)  //123
 parseInt(&quot;-123.456.789&quot;)  //-123
-parseFloat(&quot;-123.456.789&quot;)  //-123.456
 parseInt(&quot;abc&quot;)  //NaN
+
+// 从头开始解析，遇到非数字后立即停止返回，浮点数没有基数（进制）转换
+// parseFloat 可解析到第一个小数点
+parseFloat(&quot;-123.456.789&quot;)  //-123.456
 parseFloat(&quot;abc&quot;)  //NaN
 </code></pre><h2 id="布尔-boolean"><a href="#布尔-boolean" class="headerlink" title="布尔(boolean())"></a>布尔(boolean())</h2><h3 id="Number-可以将任意类型转换成布尔值"><a href="#Number-可以将任意类型转换成布尔值" class="headerlink" title="Number()可以将任意类型转换成布尔值"></a>Number()可以将任意类型转换成布尔值</h3><pre><code>//原始类型转换为布尔值
 Boolean(456)  //true
