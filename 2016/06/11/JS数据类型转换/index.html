@@ -20,7 +20,7 @@ JavaScript是一种动态类型语言，变量没有类型限制，可以随时�
 JavaScript是一种动态类型语言，变量没有类型限制，可以随时赋予任意值。虽然变量没有类型，但是数据本身和各种运算符是有类型的。如果运算符发现，数据的类型与预期不符，就会自动转换类型。当然有些时候也会出现需要强制转换的时候。
 
 强制转换强制转换主要指使用字符串(String)、数值(Number)和布尔(Boolean)三个构造函数，手动将各种类型的值，转换成数字、字符串或者布尔">
-<meta property="og:updated_time" content="2016-11-21T03:59:57.000Z">
+<meta property="og:updated_time" content="2016-11-21T06:37:32.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="JS数据类型转换">
 <meta name="twitter:description" content="数据类型转换
@@ -165,10 +165,42 @@ JavaScript是一种动态类型语言，变量没有类型限制，可以随时�
 </blockquote>
 <h2 id="强制转换"><a href="#强制转换" class="headerlink" title="强制转换"></a>强制转换</h2><p>强制转换主要指使用字符串<code>(String)</code>、数值<code>(Number)</code>和布尔<code>(Boolean)</code>三个构造函数，手动将各种类型的值，转换成数字、字符串或者布尔值。</p>
 <h2 id="字符串-String"><a href="#字符串-String" class="headerlink" title="字符串(String())"></a>字符串(String())</h2><p> 可以讲任意类型的值转化成字符串。</p>
-<h3 id="1-原始类型值的转换规则"><a href="#1-原始类型值的转换规则" class="headerlink" title="(1) 原始类型值的转换规则"></a>(1) 原始类型值的转换规则</h3><blockquote>
-<p>数值：转为相应的字符串。<br>字符串：转换后还是原来的值。<br>布尔值：true转为”true”，false转为”false”。<br>undefined：转为”undefined”。<br>null：转为”null”。</p>
+<h3 id="String-可以将任意类型转换为字符串"><a href="#String-可以将任意类型转换为字符串" class="headerlink" title="String()可以将任意类型转换为字符串"></a>String()可以将任意类型转换为字符串</h3><pre><code>//原始类型的转换
+String(123) //&quot;123&quot;  数值：转为相应的字符串。
+String(&quot;js&quot;) //&quot;js&quot;  字符串：转换后还是原来的值。
+String(true) //&quot;true&quot;  布尔值：true转为&quot;true&quot;，false转为&quot;false&quot;。
+String(undefined) //&quot;undefined&quot;  undefined：转为&quot;undefined&quot;。
+String(null) //&quot;null&quot;  null：转为&quot;null&quot;。
+</code></pre><h3 id="引用值类型（对象、函数、数组）转换为字符串，解析步骤如下："><a href="#引用值类型（对象、函数、数组）转换为字符串，解析步骤如下：" class="headerlink" title="引用值类型（对象、函数、数组）转换为字符串，解析步骤如下："></a>引用值类型（对象、函数、数组）转换为字符串，解析步骤如下：</h3><blockquote>
+<ol>
+<li>调用 toString()，如果返回原始值类型，则使用 String 构造函数处理该原始值；如果返回的是复合类型，则调用 valueOf()；</li>
+<li>如果 valueOf() 返回原始值类型，则使用 String 构造函数处理该原始值；如果返回的是复合类型，则抛出相应的错误。</li>
+</ol>
 </blockquote>
-
+<pre><code>String({a: 1}) // &quot;[object Object]&quot;
+String([1, 2, 3]) // &quot;1,2,3&quot;
+</code></pre><h2 id="数值-Number"><a href="#数值-Number" class="headerlink" title="数值(Number())"></a>数值(Number())</h2><h3 id="Number-可以将任意类型转换成数值"><a href="#Number-可以将任意类型转换成数值" class="headerlink" title="Number()可以将任意类型转换成数值"></a>Number()可以将任意类型转换成数值</h3><pre><code>Number(324) // 324  数值：转换后还是原来的值
+Number(&apos;\t\v\r324\n&apos;) // 324  字符串：如果可以被解析为数值，则转换为相应的数值
+Number(&apos;abc&apos;) // NaN  字符串：如果不可以被解析为数值，返回NaN
+Number(&apos;&apos;) // 0  空字符串转为0
+Number(undefined) // NaN  undefined：转成 NaN
+Number(null) // 0  null：转成0
+</code></pre><h3 id="parseInt-和parseFloat"><a href="#parseInt-和parseFloat" class="headerlink" title="parseInt()和parseFloat()"></a><code>parseInt()</code>和<code>parseFloat()</code></h3><blockquote>
+<p>前者将字符串转换为整数（结果不约，直接取整），后者转换为浮点数。在转换过程中，两个方法从字符串的第一个字符开始解析，直到碰到无法识别的字符结束。如果完全无法解析，两个方法都会返回 NaN。</p>
+</blockquote>
+<pre><code>parseInt(&quot;123abc&quot;)  //123
+parseInt(&quot;-123.456.789&quot;)  //-123
+parseFloat(&quot;-123.456.789&quot;)  //-123.456
+parseInt(&quot;abc&quot;)  //NaN
+parseFloat(&quot;abc&quot;)  //NaN
+</code></pre><h2 id="布尔-boolean"><a href="#布尔-boolean" class="headerlink" title="布尔(boolean())"></a>布尔(boolean())</h2><h3 id="Number-可以将任意类型转换成布尔值"><a href="#Number-可以将任意类型转换成布尔值" class="headerlink" title="Number()可以将任意类型转换成布尔值"></a>Number()可以将任意类型转换成布尔值</h3><pre><code>//原始类型转换为布尔值
+Boolean(456)  //true
+Boolean(&quot;456&quot;)  //true
+Boolean(false)  //false
+Boolean(undefined)  //false
+Boolean(null)  //false
+</code></pre><p><code>注</code>:所有对象（包括空对象）的转换结果都是true，甚至连false对应的布尔对象new Boolean(false)也是true。</p>
+<h2 id="今天做的不多，就到这了"><a href="#今天做的不多，就到这了" class="headerlink" title="今天做的不多，就到这了"></a>今天做的不多，就到这了</h2>
       
     </div>
     <div class="article-info article-info-index">
