@@ -26,7 +26,7 @@
     &amp;lt;head&amp;gt;
         &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;/&amp;gt;
         &amp;lt;title&amp;">
-<meta property="og:updated_time" content="2016-11-26T08:26:39.000Z">
+<meta property="og:updated_time" content="2016-11-26T08:32:03.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML5的动画效果">
 <meta name="twitter:description" content="HTML5动画效果 注：本章博客多为代码呈现，主要在于看效果，所以直接复制，粘贴，运行即可
@@ -300,50 +300,45 @@
     &lt;title&gt;过渡&lt;/title&gt;
     &lt;style type=&quot;text/css&quot;&gt;
         div{
-        width: 200px;
-        height: 100px;
-        background-color: red;
-
-        /*property  
-            表示哪个属性有过渡效果
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            /*property  
+                表示哪个属性有过渡效果
             可以是  width
             height 这些属性
             也可以是all
-        */
-        /*transition-property: width;*/
+            */
+            /*transition-property: width;*/
 
-        /*duration  
-            过渡总时长  单是秒、毫秒
-        */
-        /*transition-duration: 3s;*/
-
-        /*delay 
+            /*duration  
+                过渡总时长  单是秒、毫秒
+            */
+            /*transition-duration: 3s;*/
+            /*delay 
             几秒之后执行过渡动画
-        */
-        /*transition-delay: 1s;*/
-
-        /*
-            过渡的时候速度的一个曲线，
-            可以设置先快后慢，逐渐加快、逐渐变慢，
-            也可以通过贝塞尔设置自己的速度曲线
-        */
-        /*transition-timing-function: cubic-bezier(0.91, 0.18, 0.92, 0.21);*/
-
-        /*复合写法*/
-        transition: width 5s ease 0s;
-
-        /*浏览器的适用过渡*/
-        /*谷歌浏览器*/
-        -webkit-transition:;
-        /*火狐浏览器*/
-        -moz-transition:;
-        /*IE浏览器*/
-        -ms-transition:;
-        /*欧朋浏览器*/
-        -o-transition:;
+            */
+            /*transition-delay: 1s;*/
+            /*
+                过渡的时候速度的一个曲线，
+                可以设置先快后慢，逐渐加快、逐渐变慢，
+                也可以通过贝塞尔设置自己的速度曲线
+            */
+            /*transition-timing-function: cubic-bezier(0.91, 0.18, 0.92, 0.21);*/
+            /*复合写法*/
+            transition: width 5s ease 0s;
+            /*浏览器的适用过渡*/
+            /*谷歌浏览器*/
+            -webkit-transition:;
+            /*火狐浏览器*/
+            -moz-transition:;
+            /*IE浏览器*/
+            -ms-transition:;
+            /*欧朋浏览器*/
+            -o-transition:;
         }
         div:hover{
-        width: 700px;
+                width: 700px;
         }
     &lt;/style&gt;
 &lt;/head&gt;
