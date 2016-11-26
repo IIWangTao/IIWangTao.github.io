@@ -1103,64 +1103,62 @@ var duoshuoQuery = {short_name:"iiwangtao"};
         &lt;div class=&quot;div7&quot;&gt;7&lt;/div&gt;
     &lt;/body&gt;
 &lt;/html&gt;
-</code></pre><h3 id="过渡"><a href="#过渡" class="headerlink" title="过渡"></a>过渡</h3><p>通过 CSS3的transition，我们可以在不使用 Flash 动画或 JavaScript 的情况下，当元素从一种样式变换为另一种样式时为元素添加效果。<br><br>CSS3 过渡是元素从一种样式逐渐改变为另一种的效果。<br><br>要实现这一点，必须规定两项内容：<br></p>
-<ul>
-<li>指定要添加效果的CSS属性<br> </li>
-<li><p>指定效果的持续时间。<br><code>注意</code>： 如果未指定的期限，transition将没有任何效果，因为默认值是0。</p>
-<p>  &lt;!doctype html&gt;<br>  <html></html></p>
-<pre><code>&lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;/&gt;
-    &lt;title&gt;过渡&lt;/title&gt;
-    &lt;style type=&quot;text/css&quot;&gt;
-        div{
-            width: 200px;
-            height: 100px;
-            background-color: red;
-            /*property  
-                表示哪个属性有过渡效果
-            可以是  width
-            height 这些属性
-            也可以是all
-            */
-            /*transition-property: width;*/
+</code></pre><h3 id="过渡"><a href="#过渡" class="headerlink" title="过渡"></a>过渡</h3><p>通过 CSS3的transition，我们可以在不使用 Flash 动画或 JavaScript 的情况下，当元素从一种样式变换为另一种样式时为元素添加效果。<br><br>CSS3 过渡是元素从一种样式逐渐改变为另一种的效果。<br><br>要实现这一点，必须规定两项内容：指定要添加效果的CSS属性；指定效果的持续时间。<br><code>注意</code>： 如果未指定的期限，transition将没有任何效果，因为默认值是0。</p>
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;/&gt;
+        &lt;title&gt;过渡&lt;/title&gt;
+        &lt;style type=&quot;text/css&quot;&gt;
+            div{
+                width: 200px;
+                height: 100px;
+                background-color: red;
+                /*property  
+                    表示哪个属性有过渡效果
+                可以是  width
+                height 这些属性
+                也可以是all
+                */
+                /*transition-property: width;*/
 
-            /*duration  
-                过渡总时长  单是秒、毫秒
-            */
-            /*transition-duration: 3s;*/
-            /*delay 
-            几秒之后执行过渡动画
-            */
-            /*transition-delay: 1s;*/
-            /*
-                过渡的时候速度的一个曲线，
-                可以设置先快后慢，逐渐加快、逐渐变慢，
-                也可以通过贝塞尔设置自己的速度曲线
-            */
-            /*transition-timing-function: cubic-bezier(0.91, 0.18, 0.92, 0.21);*/
-            /*复合写法*/
-            transition: width 5s ease 0s;
-            /*浏览器的适用过渡*/
-            /*谷歌浏览器*/
-            -webkit-transition:;
-            /*火狐浏览器*/
-            -moz-transition:;
-            /*IE浏览器*/
-            -ms-transition:;
-            /*欧朋浏览器*/
-            -o-transition:;
-        }
-        div:hover{
-                width: 700px;
-        }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;div&gt;鼠标放我身上  查看效果&lt;/div&gt;
-&lt;/body&gt;
-</code></pre><p>  </p>
-<h3 id="2D动画"><a href="#2D动画" class="headerlink" title="2D动画"></a>2D动画</h3><p>主要使用下面五个方法：<br></p>
-</li>
+                /*duration  
+                    过渡总时长  单是秒、毫秒
+                */
+                /*transition-duration: 3s;*/
+                /*delay 
+                几秒之后执行过渡动画
+                */
+                /*transition-delay: 1s;*/
+                /*
+                    过渡的时候速度的一个曲线，
+                    可以设置先快后慢，逐渐加快、逐渐变慢，
+                    也可以通过贝塞尔设置自己的速度曲线
+                */
+                /*transition-timing-function: cubic-bezier(0.91, 0.18, 0.92, 0.21);*/
+                /*复合写法*/
+                transition: width 5s ease 0s;
+                /*浏览器的适用过渡*/
+                /*谷歌浏览器*/
+                -webkit-transition:;
+                /*火狐浏览器*/
+                -moz-transition:;
+                /*IE浏览器*/
+                -ms-transition:;
+                /*欧朋浏览器*/
+                -o-transition:;
+            }
+            div:hover{
+                    width: 700px;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt;鼠标放我身上  查看效果&lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="2D动画"><a href="#2D动画" class="headerlink" title="2D动画"></a>2D动画</h3><p>主要使用下面五个方法：<br></p>
+<ul>
 <li>translate()方法，根据左(X轴)和顶部(Y轴)位置给定的参数，从当前元素位置移动。</li>
 <li>rotate()方法，在一个给定度数顺时针旋转的元素。负值是允许的，这样是元素逆时针旋转。</li>
 <li>scale()方法，该元素增加或减少的大小，取决于宽度（X轴）和高度（Y轴）的参数：<br>scale（2,4）转变宽度为原来的大小的2倍，和其原始大小4倍的高度。</li>
