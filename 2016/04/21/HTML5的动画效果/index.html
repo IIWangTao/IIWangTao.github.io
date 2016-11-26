@@ -9,42 +9,33 @@
   <title>HTML5的动画效果 | IIWangTao</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="HTML5动画效果 注：本章博客多为代码呈现，主要在于看效果，所以直接复制，粘贴，运行即可
-倒影
-不占内容宽高
-倒影的层级比文档流的高
-倒影是相对标签进行倒影
+倒影特点：不占内容宽高；倒影的层级比文档流的高；倒影是相对标签进行倒影
 &amp;lt;!doctype html&amp;gt;
 &amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;/&amp;gt;
-    &amp;lt;title&amp;gt;倒影&amp;lt;/titl">
+    &amp;lt;head&amp;gt;
+        &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;/&amp;gt;
+        &amp;lt;title&amp;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HTML5的动画效果">
 <meta property="og:url" content="http://b397.photo.store.qq.com/psb?/V11qI0BQ4GVXfF/Rxem57*9nd439Hnb4wSy*GlYUB*JLCZppTBbbhmQQsw!/b/dI0BAAAAAAAA&bo=OASABwAAAAAFB58!&rf=viewer_4/2016/04/21/HTML5的动画效果/index.html">
 <meta property="og:site_name" content="IIWangTao">
 <meta property="og:description" content="HTML5动画效果 注：本章博客多为代码呈现，主要在于看效果，所以直接复制，粘贴，运行即可
-倒影
-不占内容宽高
-倒影的层级比文档流的高
-倒影是相对标签进行倒影
+倒影特点：不占内容宽高；倒影的层级比文档流的高；倒影是相对标签进行倒影
 &amp;lt;!doctype html&amp;gt;
 &amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;/&amp;gt;
-    &amp;lt;title&amp;gt;倒影&amp;lt;/titl">
-<meta property="og:updated_time" content="2016-11-26T08:21:25.000Z">
+    &amp;lt;head&amp;gt;
+        &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;/&amp;gt;
+        &amp;lt;title&amp;">
+<meta property="og:updated_time" content="2016-11-26T08:23:52.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTML5的动画效果">
 <meta name="twitter:description" content="HTML5动画效果 注：本章博客多为代码呈现，主要在于看效果，所以直接复制，粘贴，运行即可
-倒影
-不占内容宽高
-倒影的层级比文档流的高
-倒影是相对标签进行倒影
+倒影特点：不占内容宽高；倒影的层级比文档流的高；倒影是相对标签进行倒影
 &amp;lt;!doctype html&amp;gt;
 &amp;lt;html&amp;gt;
-&amp;lt;head&amp;gt;
-    &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;/&amp;gt;
-    &amp;lt;title&amp;gt;倒影&amp;lt;/titl">
+    &amp;lt;head&amp;gt;
+        &amp;lt;meta charset=&amp;quot;utf-8&amp;quot;/&amp;gt;
+        &amp;lt;title&amp;">
   
     <link rel="alternative" href="/atom.xml" title="IIWangTao" type="application/atom+xml">
   
@@ -179,46 +170,41 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h2 id="HTML5动画效果"><a href="#HTML5动画效果" class="headerlink" title="HTML5动画效果"></a>HTML5动画效果</h2><p> <code>注</code>：本章博客多为代码呈现，主要在于看效果，所以直接复制，粘贴，运行即可</p>
-<h3 id="倒影"><a href="#倒影" class="headerlink" title="倒影"></a>倒影</h3><ul>
-<li>不占内容宽高</li>
-<li>倒影的层级比文档流的高</li>
-<li><p>倒影是相对标签进行倒影</p>
+<h3 id="倒影"><a href="#倒影" class="headerlink" title="倒影"></a>倒影</h3><p>特点：不占内容宽高；倒影的层级比文档流的高；倒影是相对标签进行倒影</p>
 <pre><code>&lt;!doctype html&gt;
 &lt;html&gt;
-&lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;/&gt;
-    &lt;title&gt;倒影&lt;/title&gt;
-    &lt;style type=&quot;text/css&quot;&gt;
-    img{
-        display: block;
-        margin:200px auto;
-        /*倒影
-            left/right/below/above
-             左    右     下    上
-        */
-        -webkit-box-reflect:below 5px
-        -webkit-linear-gradient(
-            rgba(255,255,255,0),
-            rgba(255,255,255,0.5),
-            rgba(255,255,255,1));
-    }    
-    h1{
-        -webkit-box-reflect:below 5px    
-        -webkit-linear-gradient(
-            rgba(255,255,255,0),
-            rgba(255,255,255,0.5),
-            rgba(255,255,255,1));
-    }
-    &lt;/style&gt;
-&lt;/head&gt;
-&lt;body&gt;
-    &lt;img src=&quot;http://a1.qpic.cn/psb?/V11qI0BQ26Ocim/GEYixYXRzxQV0bcfmQqmVMD8Jk2MpevW2CxjMJiG1M8!/c/dAsBAAAAAAAA&amp;bo=FwGmAAAAAAACB5M!&amp;rf=viewer_4&quot; alt=&quot;&quot;&gt;
-    &lt;h1&gt;我是h1&lt;/h1&gt;
-&lt;/body&gt;
-&lt;/html&gt;
-</code></pre></li>
-</ul>
-<h3 id="渐变"><a href="#渐变" class="headerlink" title="渐变"></a>渐变</h3><p>为了创建一个线性渐变，你必须至少定义两种颜色结点。颜色结点即你想要呈现平稳过渡的颜色。<br>同时，你也可以设置一个起点和一个方向（或一个角度）。<br>这里只写了线性渐变和径向渐变的简单效果，深一些的希望大家去探索</p>
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;/&gt;
+        &lt;title&gt;倒影&lt;/title&gt;
+        &lt;style type=&quot;text/css&quot;&gt;
+        img{
+            display: block;
+            margin:200px auto;
+            /*倒影
+                left/right/below/above
+                 左    右     下    上
+            */
+            -webkit-box-reflect:below 5px
+            -webkit-linear-gradient(
+                rgba(255,255,255,0),
+                rgba(255,255,255,0.5),
+                rgba(255,255,255,1));
+        }    
+        h1{
+            -webkit-box-reflect:below 5px    
+            -webkit-linear-gradient(
+                rgba(255,255,255,0),
+                rgba(255,255,255,0.5),
+                rgba(255,255,255,1));
+        }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;img src=&quot;http://a1.qpic.cn/psb?/V11qI0BQ26Ocim/GEYixYXRzxQV0bcfmQqmVMD8Jk2MpevW2CxjMJiG1M8!/c/dAsBAAAAAAAA&amp;bo=FwGmAAAAAAACB5M!&amp;rf=viewer_4&quot; alt=&quot;&quot;&gt;
+        &lt;h1&gt;我是h1&lt;/h1&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
+</code></pre><h3 id="渐变"><a href="#渐变" class="headerlink" title="渐变"></a>渐变</h3><p>为了创建一个线性渐变，你必须至少定义两种颜色结点。颜色结点即你想要呈现平稳过渡的颜色。<br>同时，你也可以设置一个起点和一个方向（或一个角度）。<br>这里只写了线性渐变和径向渐变的简单效果，深一些的希望大家去探索</p>
 <pre><code>&lt;!doctype html&gt;
 &lt;html&gt;
     &lt;head&gt;
