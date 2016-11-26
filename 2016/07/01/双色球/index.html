@@ -8,16 +8,37 @@
   <link rel="dns-prefetch" href="http://b397.photo.store.qq.com/psb?/V11qI0BQ4GVXfF/Rxem57*9nd439Hnb4wSy*GlYUB*JLCZppTBbbhmQQsw!/b/dI0BAAAAAAAA&amp;bo=OASABwAAAAAFB58!&amp;rf=viewer_4">
   <title>双色球 | IIWangTao</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="双色球使用随机数做的双色球:点我看效果">
+  <meta name="description" content="双色球使用随机数做的双色球:代码如下：
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;
+    &amp;lt;title&amp;gt;双色球&amp;lt;/title&amp;gt;
+    &amp;lt;style&amp;gt;
+        *{">
 <meta property="og:type" content="article">
 <meta property="og:title" content="双色球">
 <meta property="og:url" content="http://b397.photo.store.qq.com/psb?/V11qI0BQ4GVXfF/Rxem57*9nd439Hnb4wSy*GlYUB*JLCZppTBbbhmQQsw!/b/dI0BAAAAAAAA&bo=OASABwAAAAAFB58!&rf=viewer_4/2016/07/01/双色球/index.html">
 <meta property="og:site_name" content="IIWangTao">
-<meta property="og:description" content="双色球使用随机数做的双色球:点我看效果">
-<meta property="og:updated_time" content="2016-11-26T07:06:32.000Z">
+<meta property="og:description" content="双色球使用随机数做的双色球:代码如下：
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;
+    &amp;lt;title&amp;gt;双色球&amp;lt;/title&amp;gt;
+    &amp;lt;style&amp;gt;
+        *{">
+<meta property="og:updated_time" content="2016-11-26T07:21:24.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="双色球">
-<meta name="twitter:description" content="双色球使用随机数做的双色球:点我看效果">
+<meta name="twitter:description" content="双色球使用随机数做的双色球:代码如下：
+&amp;lt;!DOCTYPE html&amp;gt;
+&amp;lt;html lang=&amp;quot;en&amp;quot;&amp;gt;
+&amp;lt;head&amp;gt;
+    &amp;lt;meta charset=&amp;quot;UTF-8&amp;quot;&amp;gt;
+    &amp;lt;title&amp;gt;双色球&amp;lt;/title&amp;gt;
+    &amp;lt;style&amp;gt;
+        *{">
   
     <link rel="alternative" href="/atom.xml" title="IIWangTao" type="application/atom+xml">
   
@@ -151,8 +172,177 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="双色球"><a href="#双色球" class="headerlink" title="双色球"></a>双色球</h2><p>使用随机数做的双色球:<br><a href="">点我看效果</a></p>
+        <h2 id="双色球"><a href="#双色球" class="headerlink" title="双色球"></a>双色球</h2><p>使用随机数做的双色球:<br><br>代码如下：<br></p>
+<pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;双色球&lt;/title&gt;
+    &lt;style&gt;
+        *{
+        margin: 0;
+        padding: 0;
+        }
+        ul,ol{
+            list-style: none;
+        }
+        .wrap{
+            width: 400px;
+            height: 700px;
+            background: red;
+            margin: 50px auto 0;
+        }
+        .wrap input{
+            width: 150px;
+            height: 60px;
+            background-color: gold;
+            display: block;
+            margin: 0 auto;
+            font-size: 20px;
+            line-height: 60px;
+            text-align: center;
+            border: none;
+        }
+        .ball,.loading{
+            height: 45px;
+            padding-top: 15px;
+            margin: 20px 15px;
+            background: #fff;
+            overflow: hidden;
+        }
+        .ball{
+            display: none;
+        }
+        .loading{
+            text-align: center;
+            line-height: 45px;
+            font-size: 30px;
+            color: #000;
+        }
+        .ball ul{
+            width: 250px;
+            float: left;
+            overflow: hidden;
+        }
+        .ball ol{
+            width: 60px;
+            float: left;
+            overflow: hidden;
+        }
+        .ball ul li{
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            background-color: red;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            float: left;
+            margin-left: 10px;
+        }
+        .ball ol li{
+            width: 30px;
+            height: 30px;
+            background-color: blue;
+            border-radius: 50%;
+            line-height: 30px;
+            text-align: center;
+            color: #fff;
+            margin-left: 20px;
+        }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;wrap&quot;&gt;
+        &lt;input type=&quot;button&quot; value=&quot;开始摇奖&quot;&gt;
+        &lt;div class=&quot;loading&quot;&gt;请开始摇奖&lt;/div&gt;
+        &lt;div class=&quot;ball&quot;&gt;
+            &lt;ul&gt;&lt;/ul&gt;
+            &lt;ol&gt;&lt;/ol&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;script&gt;
+    var btn = document.querySelector(&quot;[type=button]&quot;);
+    btn.onclick = function(){
+        var redNum = 6;
+        var blueNum = 1;
+        var redList = [];
+        var blueList = [];
+        var redHtml = &quot;&quot;;
+        var blueHtml = &quot;&quot;;
 
+
+        // 红球去重
+        while(redList.length &lt; redNum){
+            var number = random(1,33);
+            if(redList.indexOf(number) == -1){
+                redList.push(number);
+            }
+        }
+        // 红球去重
+        // for(var i = 0;i &lt; redNum;i++){
+            // redList.push(random(1,33));
+            // if (redList.indexOf(redList[i])==redList.lastIndexOf(redList[i])) {
+
+            // }else{
+            //     redList.splice(redList.lastIndexOf(redList[i]),1);
+            //     i--;
+            // }
+        // }
+
+        for(var j = 0;j &lt; blueNum;j++){
+            blueList.push(random(1,16));
+        }
+        for(var h = 0;h&lt;redList.length;h++){
+            if(redList[h] &lt; 10){
+                redHtml += &quot;&lt;li&gt;0&quot;+redList[h]+&quot;&lt;/li&gt;&quot;;
+            }else{
+                redHtml += &quot;&lt;li&gt;&quot;+redList[h]+&quot;&lt;/li&gt;&quot;;
+            }
+        }
+        if(blueList[0]&lt;10){
+            blueHtml += &quot;&lt;li&gt;0&quot;+blueList[0]+&quot;&lt;/li&gt;&quot;;
+        }else{
+            blueHtml += &quot;&lt;li&gt;&quot;+blueList[0]+&quot;&lt;/li&gt;&quot;;    
+        }
+        setColor(&quot;.ball ul&quot;).innerHTML = redHtml;
+        setColor(&quot;.ball ol&quot;).innerHTML = blueHtml;
+
+        setStyle(&quot;.loading&quot;,&quot;display&quot;,&quot;none&quot;);
+        setStyle(&quot;.ball&quot;,&quot;display&quot;,&quot;block&quot;);
+    }
+
+    function setStyle(){
+        if(arguments.length &gt; 2){
+            document.querySelector(arguments[0]).style[arguments[1]] = arguments[2];
+        }else{
+            for(var i in arguments[1]){
+                document.querySelector(arguments[0]).style[i] = arguments[1][i];
+            }
+        }
+    }
+
+    function random(m,n){
+        var num = Math.max(m,n)-Math.min(m,n);
+        return Math.round(Math.random()*num+Math.min(m,n));
+    }
+
+    function setColor(){
+        if(!arguments.length){
+            return alert(&quot;there isn&apos;t canshu!&quot;);
+        }else{
+            if(arguments.length == 1){
+                return document.querySelector(arguments[0]);
+            }else if(arguments.length &gt; 1){
+                document.querySelector(arguments[0]).style.color = arguments[1];
+            }
+        }
+    }
+
+&lt;/script&gt;
+&lt;/html&gt;
+</code></pre>
       
     </div>
     <div class="article-info article-info-index">
