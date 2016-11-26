@@ -343,6 +343,385 @@ var duoshuoQuery = {short_name:"iiwangtao"};
 
 
   
+    <article id="post-HTML5的动画效果" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/04/21/HTML5的动画效果/">HTML5的动画效果</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="HTML5动画效果"><a href="#HTML5动画效果" class="headerlink" title="HTML5动画效果"></a>HTML5动画效果</h2><p> <code>注</code>：本章博客多为代码呈现，主要在于看效果，所以直接复制，粘贴，运行即可，</p>
+<h3 id="倒影"><a href="#倒影" class="headerlink" title="倒影"></a>倒影</h3><p>特点：<br> </p>
+<ul>
+<li>不占内容宽高<br> </li>
+<li>倒影的层级比文档流的高<br> </li>
+<li><p>倒影是相对标签进行倒影<br> </p>
+<p>  &lt;!doctype html&gt;<br>  <html></html></p>
+<pre><code>&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;/&gt;
+    &lt;title&gt;倒影&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+    img{
+        display: block;
+        margin:200px auto;
+        /*倒影
+            left/right/below/above
+             左    右     下    上
+        */
+        -webkit-box-reflect:below 5px
+        -webkit-linear-gradient(
+            rgba(255,255,255,0),
+            rgba(255,255,255,0.5),
+            rgba(255,255,255,1));
+    }    
+    h1{
+        -webkit-box-reflect:below 5px    
+        -webkit-linear-gradient(
+            rgba(255,255,255,0),
+            rgba(255,255,255,0.5),
+            rgba(255,255,255,1));
+    }
+    &lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;img src=&quot;http://a1.qpic.cn/psb?/V11qI0BQ26Ocim/GEYixYXRzxQV0bcfmQqmVMD8Jk2MpevW2CxjMJiG1M8!/c/dAsBAAAAAAAA&amp;bo=FwGmAAAAAAACB5M!&amp;rf=viewer_4&quot; alt=&quot;&quot;&gt;
+    &lt;h1&gt;我是h1&lt;/h1&gt;
+&lt;/body&gt;
+</code></pre><p>  </p>
+<h3 id="渐变"><a href="#渐变" class="headerlink" title="渐变"></a>渐变</h3><p>为了创建一个线性渐变，你必须至少定义两种颜色结点。颜色结点即你想要呈现平稳过渡的颜色。<br><br>同时，你也可以设置一个起点和一个方向（或一个角度）。<br><br>这里只写了线性渐变和径向渐变的简单效果，深一些的希望大家去探索</p>
+<p>  &lt;!doctype html&gt;<br>  <html></html></p>
+<pre><code>&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;/&gt;
+    &lt;title&gt;渐变&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+    div{
+        width: 250px;
+        height: 250px;
+        border: 3px black solid;
+        color: white;
+        line-height: 250px;
+        text-align: center;
+        font-size: 25px;
+        display: inline-block;
+        /*border-radius: 50%;*/
+    }
+    /*线性（梯度）渐变*/
+    div:nth-child(1){
+        background:-webkit-linear-gradient(blue, red);
+
+    }
+    div:nth-child(2){
+        background:-webkit-linear-gradient(left, blue, red);
+
+    }
+    div:nth-child(3){
+        background:-webkit-linear-gradient(45deg, blue, red);
+
+    }
+    div:nth-child(4){
+        background:-webkit-linear-gradient(top right, blue, red);
+
+    }
+    div:nth-child(5){
+        background:-webkit-linear-gradient(top, blue 10px, red 170px);
+
+    }
+    div:nth-child(6){
+        background:-webkit-linear-gradient(top, gold 10%,blue 30%, red 70%, green 90%);
+
+    }
+    div:nth-child(7){
+        background:-webkit-repeating-linear-gradient(blue 10%, red 20%);
+
+    }
+
+    /*径向渐变*/
+    .div1{
+        background: -webkit-radial-gradient(blue, green)
+    }
+    .div2{
+        background: -webkit-radial-gradient(top, blue, green)
+    }
+    .div3{
+        display: block;
+        width: 750px;
+        background: -webkit-repeating-radial-gradient(blue 10%, green 20%)
+    }
+    .div4{
+
+        width: 750px;
+
+        background: -webkit-repeating-radial-gradient(circle, blue 10%, green 20%)
+    }
+    .div5{
+        background: -webkit-radial-gradient(top, blue 10px, green 60px)
+    }
+    .div6{
+        background: -webkit-radial-gradient(top, blue 10%, green 40%, gold 70%)
+    }
+    .div7{
+        background: -webkit-repeating-radial-gradient(blue 10%, green 30%)
+    }
+</code></pre></li>
+</ul>
+<pre><code>    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div&gt;grad_1&lt;/div&gt;
+        &lt;div&gt;grad_2&lt;/div&gt;
+        &lt;div&gt;grad_3&lt;/div&gt;
+        &lt;div&gt;grad_4&lt;/div&gt;
+        &lt;div&gt;grad_5&lt;/div&gt;
+        &lt;div&gt;grad_6&lt;/div&gt;
+        &lt;div&gt;grad_7&lt;/div&gt;
+        &lt;h1&gt;上面的效果都是线性渐变&lt;/h1&gt;
+        &lt;div class=&quot;div1&quot;&gt;1&lt;/div&gt;
+        &lt;div class=&quot;div2&quot;&gt;2&lt;/div&gt;
+        &lt;div class=&quot;div3&quot;&gt;3&lt;/div&gt;
+        &lt;div class=&quot;div4&quot;&gt;4&lt;/div&gt;
+        &lt;div class=&quot;div5&quot;&gt;5&lt;/div&gt;
+        &lt;div class=&quot;div6&quot;&gt;6&lt;/div&gt;
+        &lt;div class=&quot;div7&quot;&gt;7&lt;/div&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="过渡"><a href="#过渡" class="headerlink" title="过渡"></a>过渡</h3><p>通过 CSS3的transition，我们可以在不使用 Flash 动画或 JavaScript 的情况下，当元素从一种样式变换为另一种样式时为元素添加效果。<br><br><br><br>CSS3 过渡是元素从一种样式逐渐改变为另一种的效果。<br><br><br><br>要实现这一点，必须规定两项内容：<br></p>
+<ul>
+<li>指定要添加效果的CSS属性<br> </li>
+<li><p>指定效果的持续时间。<br><code>注意</code>： 如果未指定的期限，transition将没有任何效果，因为默认值是0。</p>
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;/&gt;
+    &lt;title&gt;过渡&lt;/title&gt;
+    &lt;style type=&quot;text/css&quot;&gt;
+    div{
+        width: 200px;
+        height: 100px;
+        background-color: red;
+
+        /*property  
+            表示哪个属性有过渡效果
+            可以是  width
+            height 这些属性
+            也可以是all
+        */
+        /*transition-property: width;*/
+
+        /*duration  
+            过渡总时长  单是秒、毫秒
+        */
+        /*transition-duration: 3s;*/
+
+        /*delay 
+            几秒之后执行过渡动画
+        */
+        /*transition-delay: 1s;*/
+
+        /*
+            过渡的时候速度的一个曲线，
+            可以设置先快后慢，逐渐加快、逐渐变慢，
+            也可以通过贝塞尔设置自己的速度曲线
+        */
+        /*transition-timing-function: cubic-bezier(0.91, 0.18, 0.92, 0.21);*/
+
+        /*复合写法*/
+        transition: width 5s ease 0s;
+
+        /*浏览器的适用过渡*/
+        /*谷歌浏览器*/
+        -webkit-transition:;
+        /*火狐浏览器*/
+        -moz-transition:;
+        /*IE浏览器*/
+        -ms-transition:;
+        /*欧朋浏览器*/
+        -o-transition:;
+    }
+    div:hover{
+        width: 700px;
+    }
+</code></pre></li>
+</ul>
+<pre><code>&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div&gt;鼠标放我身上  查看效果&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="2D动画"><a href="#2D动画" class="headerlink" title="2D动画"></a>2D动画</h3><p>主要使用下面五个方法：<br></p>
+<ul>
+<li>translate()方法，根据左(X轴)和顶部(Y轴)位置给定的参数，从当前元素位置移动。</li>
+<li>rotate()方法，在一个给定度数顺时针旋转的元素。负值是允许的，这样是元素逆时针旋转。</li>
+<li>scale()方法，该元素增加或减少的大小，取决于宽度（X轴）和高度（Y轴）的参数：<br>scale（2,4）转变宽度为原来的大小的2倍，和其原始大小4倍的高度。</li>
+<li>skew()方法，该元素会根据横向（X轴）和垂直（Y轴）线参数给定角度:<br>skew(30deg,20deg)是绕X轴和Y轴周围20度30度的元素。</li>
+</ul>
+<pre><code>    &lt;!doctype html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;utf-8&quot;/&gt;
+        &lt;title&gt;2D动画&lt;/title&gt;
+        &lt;style type=&quot;text/css&quot;&gt;
+        div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            line-height: 200px;
+            color: white;
+            font-size: 50px;
+            text-align: center;
+            transform-origin: 200px 200px;
+
+
+        }
+        .div1:hover{
+            transform: rotate(360000deg) translate(1000px,400px) scale(0.5,0.1) skew(180deg) skewY(180deg);
+            transition:all 100s ease 0.2s;
+
+
+        }
+        .div2:hover{
+            transform: translate(400px,400px);
+            transition:all 15s ease 0.2s;
+
+        }
+        .div3:hover{
+            transform: scale(0.5,0.1);
+            transition:all 15s ease 3s;
+        }
+        .div4:hover{
+            transform: skew(180deg);
+            transition:all 15s ease;
+
+        }
+        .div5:hover{
+            transform: skewY(180deg);
+            transition:all 15s ease;
+
+        }
+    &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class=&quot;div1&quot;&gt;旋转&lt;/div&gt;
+        &lt;div class=&quot;div2&quot;&gt;位移&lt;/div&gt;
+        &lt;div class=&quot;div3&quot;&gt;缩放&lt;/div&gt;
+        &lt;div class=&quot;div4&quot;&gt;形变&lt;/div&gt;
+        &lt;div class=&quot;div5&quot;&gt;Y形变&lt;/div&gt;
+    &lt;/body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h3 id="3D动画"><a href="#3D动画" class="headerlink" title="3D动画"></a>3D动画</h3><p>3D平移分别有三个方向：<br><br>第一个方向：translateX(x) 定义 3D 转化，仅使用用于 X 轴的值，以X轴平移；<br>第二个方向：translateX(Y) 定义 3D 转化，仅使用用于 Y 轴的值，以Y轴平移；这个和以X轴方向差不多，也就是上下平移，如果平移的负值，则往Y轴的负方向，也就是往下平移，反之，向上平移<br>第三个方向：translateZ(z) 定义 3D 转化，仅使用用于 Z 轴的值，以Z轴平移；对于这个角度的值，就得有三维空间的想象力了，那么，往Z周的正方向来平移，也就是相当于与我们眼睛目视前方的距离越来越近<br>3D旋转:<br>rotateX(angle) 定义沿 X 轴的 3D 旋转。<br>rotateY(angle) 定义沿 Y 轴的 3D 旋转<br>rotateZ(angle) 定义沿 Z 轴的 3D 旋转<br></p>
+<pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;/&gt;
+    &lt;title&gt;3D动画&lt;/title&gt;
+&lt;style&gt;
+    div{
+        width: 200px;
+        height: 200px;
+        background-color: red;
+        font-size: 30px;
+        color: white;
+        line-height: 200px;
+        text-align: center;
+        transition: all 2s ease 0.2s;
+    }
+    .div1{
+        transform-origin: 0px 0px;
+    }
+    .div1:hover{
+        transform: rotateX(360deg);
+    }
+    .div2:hover{
+        transform: rotateY(360deg);
+    }
+    .div3:hover{
+        transform: rotateZ(360deg);
+    }
+    .div4:hover{
+        transform: translateZ(501px);
+    }
+    .div5:hover{
+        transform: scale3d(2, 2, 2);
+    }
+    .eyes{
+        perspective: 500px;
+    }
+    .box{
+        transform-style: preserve-3d;
+    }
+&lt;/style&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;div class=&quot;div1&quot;&gt;X旋转&lt;/div&gt;
+    &lt;div class=&quot;div2&quot;&gt;Y旋转&lt;/div&gt;
+    &lt;div class=&quot;div3&quot;&gt;Z旋转&lt;/div&gt;
+    &lt;div class=&quot;div5&quot;&gt;缩放&lt;/div&gt;
+    &lt;div class=&quot;eyes&quot;&gt;
+        &lt;div class=&quot;box&quot;&gt;
+            &lt;div class=&quot;div4&quot;&gt;Z位移&lt;/div&gt;
+        &lt;/div&gt;
+    &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre><h2 id="讲解较少，多为代码，复制，粘贴，运行即可看到效果"><a href="#讲解较少，多为代码，复制，粘贴，运行即可看到效果" class="headerlink" title="讲解较少，多为代码，复制，粘贴，运行即可看到效果"></a>讲解较少，多为代码，复制，粘贴，运行即可看到效果</h2>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      <a href="/2016/04/21/HTML5的动画效果/" class="archive-article-date">
+  	<time datetime="2016-04-21T05:30:12.000Z" itemprop="datePublished"><i class="icon-clock"></i>2016-04-21</time>
+</a>
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/HTML5-动画/">HTML5 动画</a></li></ul>
+	</div>
+
+      
+
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
+
+
+
+<!-- 多说评论框 start -->
+   <div class="ds-thread" data-thread-key="post-HTML5的动画效果" data-title="HTML5的动画效果" data-url="undefined"></div>
+<!-- 多说评论框 end -->
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+var duoshuoQuery = {short_name:"iiwangtao"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0] 
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+<!-- 多说公共JS代码 end -->
+
+
+  
     <article id="post-HTML5新标签" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -819,7 +1198,7 @@ var duoshuoQuery = {short_name:"iiwangtao"};
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/html5-新标签/" style="font-size: 10px;">html5 新标签</a> <a href="/tags/数据类型/" style="font-size: 10px;">数据类型</a> <a href="/tags/数据类型转换/" style="font-size: 10px;">数据类型转换</a>
+    				<a href="/tags/HTML5-动画/" style="font-size: 10px;">HTML5 动画</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/hexo/" style="font-size: 20px;">hexo</a> <a href="/tags/html5-新标签/" style="font-size: 10px;">html5 新标签</a> <a href="/tags/数据类型/" style="font-size: 10px;">数据类型</a> <a href="/tags/数据类型转换/" style="font-size: 10px;">数据类型转换</a>
     			</div>
     	</section>
     
