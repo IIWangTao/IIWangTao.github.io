@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>导航</title>
+	<style>
+		*{
+			padding: 0;
+			margin: 0;
+			font-size: 0;
+		}
+		button{
+			width: 100px;
+			height: 50px;
+			background-color: lightgray;
+			font-size: 20px;
+			outline: 0;
+		}
+		div{
+			position: relative;
+			left: 0;
+			width: 100px;
+			height: 4px;
+			background: green;
+		}
+	</style>
+</head>
+<body>
+	<button>按钮1</button>
+	<button>按钮2</button>
+	<button>按钮3</button>
+	<button>按钮4</button>
+	<div></div>
+</body>
+<script src='tween.js'></script>
+<script>
+	var btns=document.querySelectorAll('button');
+	var box=document.querySelector('div');
+	var timer=null;
+	for(var i=0;i<btns.length;i++){
+		btns[i].index=i;
+		btns[i].onclick=function(){
+			var t=0;
+			var b=box.offsetLeft;
+			var c=btns[0].offsetWidth*this.index-b;
+			var d=30;
+			clearInterval(timer);
+			timer=setInterval(function(){
+				t++;
+				if(t>=d){
+					clearInterval(timer);
+				};
+				box.style.left=Tween.Bounce.easeOut(t,b,c,d)+'px'
+			},30)
+
+		}
+	}
+</script>
+</html>
